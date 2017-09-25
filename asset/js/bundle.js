@@ -33422,7 +33422,6 @@ var Root = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Root.__proto__ || Object.getPrototypeOf(Root)).call(this, props));
 
         _this.updateStore = function () {
-            // debugger
             _this.setState({ store: _this.state.store });
         };
 
@@ -33437,9 +33436,6 @@ var Root = function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
-            // console.log('init');
-            // console.log(this.state.store.getState());
-            // debugger
             return _react2.default.createElement(
                 'div',
                 { id: 'root' },
@@ -46252,7 +46248,6 @@ var SurveyReducer = function SurveyReducer() {
         case 'VOTE':
             // create a copy of original state
             var newState = state.slice();
-            // debugger
             for (var i = 0; i < newState.length; i++) {
                 if (newState[i].id === action.questionId) {
                     for (var j = 0; j < newState[i].answers.length; j++) {
@@ -46263,7 +46258,6 @@ var SurveyReducer = function SurveyReducer() {
                 }
             }
             // return a new state
-            // console.log(newState);
             return newState;
         default:
             return state;
@@ -46362,7 +46356,6 @@ var Survey = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Survey.__proto__ || Object.getPrototypeOf(Survey)).call(this, props));
 
         _this.updateCheckBoxInfo = function (e, questionId) {
-            // debugger
             var msg = 'Added ' + _this.props.store.getState().filter(function (x) {
                 return x.id === questionId;
             })[0].answers.filter(function (x) {

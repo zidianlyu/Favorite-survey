@@ -44,7 +44,6 @@ class Survey extends React.Component {
     }
 
     updateCheckBoxInfo = (e, questionId) => {
-        // debugger
         let msg = 'Added ' + this.props.store.getState().filter(x => x.id === questionId)[0].answers.filter(x => x.id === parseInt(e.target.value))[0].text + ' to the survey!';
         this.setState({
             questionId: questionId,

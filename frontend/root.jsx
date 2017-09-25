@@ -13,13 +13,10 @@ class Root extends React.Component {
         }
     }
     updateStore = () => {
-        // debugger
         this.setState({store: this.state.store})
     }
+    
     render() {
-        // console.log('init');
-        // console.log(this.state.store.getState());
-        // debugger
         return (
             <div id="root">
                 <MuiThemeProvider id="survey-component">

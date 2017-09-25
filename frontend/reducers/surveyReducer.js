@@ -38,7 +38,6 @@ const SurveyReducer = (state = initSurveyState, action) => {
         case 'VOTE':
             // create a copy of original state
             let newState = state.slice();
-            // debugger
             for(let i = 0; i < newState.length; i++){
                 if(newState[i].id === action.questionId){
                     for(let j = 0; j < newState[i].answers.length; j++){
@@ -49,7 +48,6 @@ const SurveyReducer = (state = initSurveyState, action) => {
                 }
             }
             // return a new state
-            // console.log(newState);
             return newState;
         default:
             return state;
