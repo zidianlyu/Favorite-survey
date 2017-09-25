@@ -18668,6 +18668,7 @@ var Report = function (_React$Component) {
 
                 var options = {
                     legend: {
+                        // hide the polar grid
                         // display: false
                         labels: {
                             fontSize: 13

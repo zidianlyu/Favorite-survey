@@ -1,6 +1,6 @@
 ## A survey about your favorite
 
-This is a fully function app for survey purpose built in ReactJS
+This is a fully functional app for survey purpose built in ReactJS
 
 [live][Favorite-survey]
 

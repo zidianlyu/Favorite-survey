@@ -36,6 +36,7 @@ class Report extends React.Component {
 
             const options = {
                 legend: {
+                    // hide the polar grid
                     // display: false
                     labels: {
                         fontSize: 13
