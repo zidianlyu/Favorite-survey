@@ -1,7 +1,6 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import {Doughnut} from 'react-chartjs-2';
-import Divider from 'material-ui/Divider';
+import {Polar} from 'react-chartjs-2';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import Visibility from 'material-ui/svg-icons/action/visibility';
 
@@ -16,10 +15,9 @@ class Report extends React.Component {
     buildSurveyReport() {
         let surveyReport = [];
         this.state.resStore.map((info, idx) => {
-            let themeColor = ['#FF6384', '#4BC0C0', '#FFCE56', '#E7E9ED', '#36A2EB'];
+            var themeColor = ['rgba(255, 99, 132, 0.75)', 'rgba(75, 192, 192, 0.75)', 'rgba(255, 206, 86, 0.75)', 'rgba(231, 233, 237, 0.75)', 'rgba(54, 162, 235, 0.75)'];
             let backgroundColor = themeColor.sort((a, b) => 0.5 - Math.random());
-            let borderColor = backgroundColor.slice().map(x => x.replace(new RegExp('0.2', 'gi'), '1'));
-            let hoverBackgroundColor = backgroundColor.slice().map(x => x.replace(new RegExp('0.2', 'gi'), '0.4'));
+            let hoverBackgroundColor = backgroundColor.slice().map(x => x.replace(new RegExp('0.75', 'gi'), '1'));
 
             const data = {
                 datasets: [
@@ -28,21 +26,34 @@ class Report extends React.Component {
                             info.answers[0].responses, info.answers[1].responses, info.answers[2].responses
                         ],
                         backgroundColor: backgroundColor,
-                        borderColor: borderColor,
+                        borderWidth: 2,
                         hoverBackgroundColor: hoverBackgroundColor,
-                        borderWidth: 1,
                         label: 'My dataset'
                     }
                 ],
                 labels: [info.answers[0].text, info.answers[1].text, info.answers[2].text]
             };
 
+            const options = {
+                legend: {
+                    // display: false
+                    labels: {
+                        fontSize: 13
+                    }
+                },
+                scale: {
+                    display: false
+                },
+                startAngle: Math.random() * 5
+            }
 
             surveyReport.push(
-                <div key={info.id} className="doughnut-chart-pack" style={{margin: '20px 0 0'}}>
+                <div key={info.id} className="doughnut-chart-pack" style={{
+                    margin: '20px 0 0'
+                }}>
                     <h4 className="doughnut-chart-header">{info.text}</h4>
                     <div className='doughnut-chart'>
-                        <Doughnut data={data}/>
+                        <Polar data={data} options={options}/>
                     </div>
                     <div className='data-under-chart'>
                         <div className='data-under-chart-item'>
@@ -50,7 +61,7 @@ class Report extends React.Component {
                                 {info.answers[0].text}&nbsp;
                             </label>
                             <span className='data-num-label' style={{
-                                color: backgroundColor[0]
+                                color: hoverBackgroundColor[0]
                             }}>
                                 {info.answers[0].responses}
                             </span>
@@ -60,7 +71,7 @@ class Report extends React.Component {
                                 {info.answers[1].text}&nbsp;
                             </label>
                             <span className='data-num-label' style={{
-                                color: backgroundColor[1]
+                                color: hoverBackgroundColor[1]
                             }}>
                                 {info.answers[1].responses}
                             </span>
@@ -70,7 +81,7 @@ class Report extends React.Component {
                                 {info.answers[2].text}&nbsp;
                             </label>
                             <span className='data-num-label' style={{
-                                color: backgroundColor[2]
+                                color: hoverBackgroundColor[2]
                             }}>
                                 {info.answers[2].responses}
                             </span>
@@ -78,9 +89,6 @@ class Report extends React.Component {
                     </div>
                 </div>
             );
-            if (idx !== this.state.resStore.length - 1) {
-                surveyReport.push(<Divider key={~~(Math.random() * 100 + 3)}/>);
-            }
         });
         return surveyReport;
     }
@@ -90,7 +98,7 @@ class Report extends React.Component {
             margin: '20px',
             padding: '20px',
             position: 'relative',
-            height: '95%',
+            height: '96%'
         };
 
         return (

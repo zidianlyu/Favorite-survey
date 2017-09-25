@@ -28,13 +28,13 @@
 }
 
 .survey-body {
-    margin: 40px 0 0;
+    margin: 20px 0 0;
     padding: 20px;
     box-shadow: 0 1px 6px #ccc;
-    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 280px;
 }
 
 .survey-body p.alert {

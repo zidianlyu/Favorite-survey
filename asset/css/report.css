@@ -1,5 +1,8 @@
 .doughnut-chart-pack {
     /*margin: 5px 0 0;*/
+    margin: 20px 0px 0px;
+    padding: 20px;
+    box-shadow: 0 1px 6px #ccc;
 }
 
 .doughnut-chart-header {
@@ -10,8 +13,7 @@
 }
 
 .doughnut-chart {
-    padding: 15px;
-    box-shadow: 0 1px 6px #ccc;
+    padding: 15px 0 0;
 }
 
 .doughnut-chart:hover {
@@ -57,7 +59,7 @@
     align-items: center;
 }
 
-.report-top-header{
+.report-top-header {
     display: flex;
     justify-content: center;
 }

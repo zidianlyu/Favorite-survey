@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    min-width: 930px;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .survey-container {

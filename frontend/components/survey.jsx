@@ -94,7 +94,7 @@ class Survey extends React.Component {
             margin: '20px',
             padding: '20px',
             position: 'relative',
-            height: '95%'
+            height: '96%'
         };
 
         const checkBoxStyles = {
@@ -175,7 +175,8 @@ class Survey extends React.Component {
                             </div>
                         )}
                     <Card style={{
-                        margin: '20px 0 0'
+                        margin: '25px 0 0',
+                        height: '358px',
                     }}>
                         <CardHeader title="Zidian Lyu" subtitle="Software Engineer" avatar="asset/img/profile_img.jpg"/>
                         <Divider/>
@@ -183,7 +184,7 @@ class Survey extends React.Component {
                         <Divider/>
                         <CardText>
                             <div className="chip-wrapper" style={chipStyles.wrapper}>
-                                <Chip onClick={() => this.handleClickChip('The first thing I touch about web development ever!')} style={chipStyles.chip}>
+                                <Chip onClick={() => this.handleClickChip('The first language that I learn about web development!')} style={chipStyles.chip}>
                                     <Avatar size={32}>
                                         <i className="devicon-html5-plain colored"></i>
                                     </Avatar>
@@ -195,15 +196,21 @@ class Survey extends React.Component {
                                     </Avatar>
                                     CSS3
                                 </Chip>
-                                <Chip onClick={() => this.handleClickChip('I used Reactjs to develope this project! Please reach out to me for more demos!')} style={chipStyles.chip}>
+                                <Chip onClick={() => this.handleClickChip('The prossional CSS-based framework that I use in most of my development.')} style={chipStyles.chip}>
+                                    <Avatar size={32}>
+                                        <i className="devicon-bootstrap-plain-wordmark colored"></i>
+                                    </Avatar>
+                                    Boostrap
+                                </Chip>
+                                <Chip onClick={() => this.handleClickChip('I used Reactjs to develope this project. Please reach out to me for more demos!')} style={chipStyles.chip}>
                                     <Avatar size={32}>
                                         <i className="devicon-react-original colored"></i>
                                     </Avatar>
                                     Reactjs
                                 </Chip>
-                                <Chip onClick={() => this.handleClickChip('I develope in Django Framework in my work space')} style={chipStyles.chip}>
+                                <Chip onClick={() => this.handleClickChip('I am developing in Django-base web framework in my work.')} style={chipStyles.chip}>
                                     <Avatar size={32}>
-                                        <i className="devicon-django-plain colored"></i>
+                                        <i className="devicon-django-plain colored" style={{fontSize: '24px'}}></i>
                                     </Avatar>
                                     Django
                                 </Chip>
@@ -219,7 +226,13 @@ class Survey extends React.Component {
                                     </Avatar>
                                     Rails
                                 </Chip>
-                                <Chip onClick={() => this.handleClickChip('The database that I work with in my work space')} style={chipStyles.chip}>
+                                <Chip onClick={() => this.handleClickChip('The IDE that I feel the most comfortable to work with.')} style={chipStyles.chip}>
+                                    <Avatar size={32}>
+                                        <i className="devicon-atom-original colored"></i>
+                                    </Avatar>
+                                    Atom
+                                </Chip>
+                                <Chip onClick={() => this.handleClickChip('The database that I work with in my work.')} style={chipStyles.chip}>
                                     <Avatar size={32}>
                                         <i className="devicon-mysql-plain colored"></i>
                                     </Avatar>
@@ -231,11 +244,17 @@ class Survey extends React.Component {
                                     </Avatar>
                                     PostgreSQL
                                 </Chip>
-                                <Chip onClick={() => this.handleClickChip('The tools that I use for code commitment')} style={chipStyles.chip}>
+                                <Chip onClick={() => this.handleClickChip('The tools that I use for code commitment.')} style={chipStyles.chip}>
                                     <Avatar size={32}>
                                         <i className="devicon-git-plain colored"></i>
                                     </Avatar>
                                     Git
+                                </Chip>
+                                <Chip onClick={() => this.handleClickChip('The site I use the most to deploy my personal projects.')} style={chipStyles.chip}>
+                                    <Avatar size={32}>
+                                        <i className="devicon-heroku-plain-wordmark colored"></i>
+                                    </Avatar>
+                                    Heroku
                                 </Chip>
                             </div>
                         </CardText>
