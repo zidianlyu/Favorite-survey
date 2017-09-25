@@ -1,0 +1,14 @@
+#root {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    min-width: 930px;
+}
+
+.survey-container {
+    width: 48%;
+}
+
+.report-container {
+    width: 48%;
+}

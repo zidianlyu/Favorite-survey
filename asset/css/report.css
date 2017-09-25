@@ -1,0 +1,63 @@
+.doughnut-chart-pack {
+    /*margin: 5px 0 0;*/
+}
+
+.doughnut-chart-header {
+    /*font-family: 'Helvetica', Sans-serif;*/
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+
+.doughnut-chart {
+    padding: 15px;
+    box-shadow: 0 1px 6px #ccc;
+}
+
+.doughnut-chart:hover {
+    cursor: pointer;
+}
+
+.data-under-chart {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.data-under-chart-item {
+    display: flex;
+    align-items: center;
+}
+
+.data-under-chart-item label {
+    font-family: 'Helvetica', Sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    margin: 0;
+}
+
+.data-num-label {
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: all 0.8s;
+    padding: 3px 0;
+    border-radius: 3px;
+    width: 40px;
+    text-align: center;
+}
+
+.report-top-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #4BC0C0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.report-top-header{
+    display: flex;
+    justify-content: center;
+}

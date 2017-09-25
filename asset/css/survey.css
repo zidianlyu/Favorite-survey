@@ -1,0 +1,75 @@
+.option-tips {
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.8s;
+}
+
+.survey-top-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #4BC0C0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.survey-top-header {
+    display: flex;
+    justify-content: center;
+}
+
+.init-survey-hearder {
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+
+.survey-body {
+    margin: 40px 0 0;
+    padding: 20px;
+    box-shadow: 0 1px 6px #ccc;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.survey-body p.alert {
+    margin: 0 auto 20px;
+    width: 250px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 400;
+}
+
+.survey-item-input-group {
+    margin: 20px 20px 0;
+}
+
+.survey-item h4 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.survey-item h4 span {
+    color: #FF6384;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 200;
+}
+
+.survey-option-alert {
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.color-test {
+    color: '#FF6384', '#4BC0C0', '#FFCE56', '#E7E9ED', '#36A2EB';
+}
